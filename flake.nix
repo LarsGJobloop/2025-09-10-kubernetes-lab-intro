@@ -25,6 +25,7 @@
             kind # Create test clusters
             kubectl # Manage clusters
             k9s # Terminal UI for Kubernetes
+            docker
           ];
         };
       });
