@@ -17,7 +17,7 @@ This is a **beginner-friendly experimental sandbox** designed to help you:
 
 This environment comes pre-configured with essential Kubernetes tools:
 
-- **`kind`** - Creates lightweight Kubernetes clusters for testing
+- **`k3d`** - Creates lightweight Kubernetes clusters inside Docker for testing
 - **`kubectl`** - Command-line tool for managing Kubernetes clusters
 - **`k9s`** - Interactive terminal UI for exploring your cluster
 
@@ -66,7 +66,7 @@ Reload the development environment
 ### 2. Start Your First Cluster
 ```bash
 # Create a local Kubernetes cluster
-kind create cluster --name k8s-lab
+k3d cluster create
 
 # Verify it's working
 kubectl cluster-info
@@ -114,7 +114,7 @@ Each example includes:
 When you're done experimenting:
 ```bash
 # Delete your cluster
-kind delete cluster --name k8s-lab
+k3d cluster delete
 
 # Or delete specific resources
 kubectl delete -f example-manifests/01-basic-deployment/
@@ -125,10 +125,10 @@ kubectl delete -f example-manifests/01-basic-deployment/
 To reset everything and start over:
 ```bash
 # Delete existing cluster
-kind delete cluster --name k8s-lab
+k3d cluster delete
 
 # Create a new cluster
-kind create cluster --name k8s-lab
+k3d cluster create
 ```
 
 ## 📖 Additional Resources
@@ -141,7 +141,7 @@ kind create cluster --name k8s-lab
 - [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) - Quick reference
 
 ### Tool Documentation
-- [kind Documentation](https://kind.sigs.k8s.io/) - Creating clusters with kind
+- [k3d Documentation](https://k3d.io/stable/) - Creating clusters with k3d
 - [k9s Documentation](https://k9scli.io/) - Terminal UI for Kubernetes
 
 ### Learning Paths

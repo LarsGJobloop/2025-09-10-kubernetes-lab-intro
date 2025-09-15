@@ -22,7 +22,7 @@
           packages = with pkgs; [
             # Add CLI tools here. Search for tools at the following URL:
             # https://search.nixos.org/packages?channel=unstable
-            kind # Create test clusters
+            k3d # Another kubernetes in docker variant
             kubectl # Manage clusters
             k9s # Terminal UI for Kubernetes
             docker
