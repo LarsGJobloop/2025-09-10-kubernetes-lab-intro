@@ -25,12 +25,14 @@ This environment comes pre-configured with essential Kubernetes tools:
 
 ### 0. Enable Dockerd TCP communication over the local interface
 
-Edit docker.json in:
+1. Edit docker.json in:
 
 - Windows Docker Desktop: `C:\ProgramData\docker\config\daemon.json`
-- Linux Docker Desktop: `/etc/docker/daemon.json`
-- Linux Rootless Docker Desktop: `~/.config/docker/daemon.json`
+- Linux, Docker Desktop: `/etc/docker/daemon.json`
+- Linux Rootless, Docker Desktop: `~/.config/docker/daemon.json`
 - MacOS OrbStack:`~/.orbstack/config/docker.json`
+
+2. Restart the Docker Daemon
 
 Configuration
 ```json
