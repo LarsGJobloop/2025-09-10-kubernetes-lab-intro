@@ -25,8 +25,22 @@ This environment comes pre-configured with essential Kubernetes tools:
 
 ### 1. Open in Dev Container
 This project uses Dev Containers for consistent, isolated development environments:
-- Open in VS Code and choose "Reopen in Container" when prompted
-- Or use any compatible editor with Dev Container support
+1. Open in VS Code and choose "Reopen in Container" when prompted
+    - Or use any compatible editor with Dev Container support
+2. Load the development environment
+
+    ```sh
+    nix develop
+    ```
+
+#### If adding new CLI/Binaries
+
+Reload the development environment
+
+    ```sh
+    exit
+    nix develop
+    ```
 
 ### 2. Start Your First Cluster
 ```bash
