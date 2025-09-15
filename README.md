@@ -23,6 +23,25 @@ This environment comes pre-configured with essential Kubernetes tools:
 
 ## 🚀 Getting Started
 
+### 0. Enable Dockerd TCP communication over the local interface
+
+Edit docker.json in:
+
+- Windows Docker Desktop: `C:\ProgramData\docker\config\daemon.json`
+- Linux Docker Desktop: `/etc/docker/daemon.json`
+- Linux Rootless Docker Desktop: `~/.config/docker/daemon.json`
+- MacOS OrbStack:`~/.orbstack/config/docker.json`
+
+Configuration
+```json
+{
+  "hosts": [
+    "unix:///var/run/docker.sock",
+    "tcp://127.0.0.1:2375"
+  ]
+}
+```
+
 ### 1. Open in Dev Container
 This project uses Dev Containers for consistent, isolated development environments:
 1. Open in VS Code and choose "Reopen in Container" when prompted
