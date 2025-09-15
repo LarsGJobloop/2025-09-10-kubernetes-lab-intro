@@ -4,7 +4,10 @@
   "name": "nix-dev",
   "image": "ghcr.io/xtruder/nix-devcontainer:latest",
   // Keep the nix store in a volume to avoid re-building the nix store on every restart
-  "mounts": ["source=nix-store,target=/nix,type=volume"],
+  "mounts": [
+    "source=nix-store,target=/nix,type=volume",
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
   // Add devcontainer specific files to workspace gitignore
   "postCreateCommand": "cat .devcontainer/.gitignore-extra >> .git/info/exclude"
 }
